@@ -1,0 +1,37 @@
+{
+  "name": "tessel-mocks",
+  "version": "1.0.0",
+  "description": "Mock your Tessel functionality while working locally",
+  "main": "index.js",
+  "scripts": {
+    "test": "./node_modules/.bin/mocha --reporter spec",
+    "test-dev": "./node_modules/.bin/mocha --reporter spec --watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/emcniece/tessel-mocks.git"
+  },
+  "keywords": [
+    "tessel",
+    "tessel2",
+    "mock",
+    "prototype",
+    "test",
+    "localhost"
+  ],
+  "author": "Eric McNiece",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/emcniece/tessel-mocks/issues"
+  },
+  "homepage": "https://github.com/emcniece/tessel-mocks#readme",
+  "devDependencies": {
+    "chai": "^3.5.0",
+    "mocha": "^3.0.1",
+    "mocha-sinon": "^1.1.5",
+    "sinon": "^1.17.5"
+  },
+  "dependencies": {
+    "colors": "^1.1.2"
+  }
+}
