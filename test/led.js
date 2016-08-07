@@ -28,6 +28,28 @@ describe('LED Class', function() {
       expect(led).to.have.property('toggle');
   });
 
+  it('should have the ERRO LED first', function () {
+    led = new LED(0);
+    expect(led.info.name).to.equal('ERRO')
+  });
+
+  it('should have the CONN LED second', function () {
+    led = new LED(1);
+    expect(led.info.name).to.equal('CONN')
+  });
+
+
+  it('should have the LED1 LED third', function () {
+    led = new LED(2);
+    expect(led.info.name).to.equal('LED1')
+  });
+
+  it('should have the LED2 LED fourth', function () {
+    led = new LED(3);
+    expect(led.info.name).to.equal('LED2')
+  });
+
+
   describe('#isOn', function () {
     it('should default to false', function () {
       expect(led.isOn).to.be.false;
