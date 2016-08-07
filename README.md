@@ -24,3 +24,16 @@ try {
 ```
 
 From this point on, when running locally the Tessel commands will print statements in the console instead of performing actions on the device.
+
+##Todo Mocks
+
+- [x] LEDs
+- [ ] Digital Pins
+- [ ] Analog Pins
+- [ ] Interrupt Pins
+- [ ] Ports
+- [ ] UART
+- [ ] SPI
+- [ ] I2C
+- [ ] PWM
+- [ ] Button
