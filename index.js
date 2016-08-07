@@ -1,7 +1,9 @@
 'use strict';
 
 let colors = require('colors');
-let LED = require('./lib/led');
+
+let LED   = require('./lib/led');
+let Port  = require('./lib/port');
 
 module.exports = class tesselMock{
   constructor(){
@@ -14,20 +16,12 @@ module.exports = class tesselMock{
       new LED(3)
     ];
 
-    this.port = [
-      this.portFn('A'),
-      this.portFn('B')
-    ];
-  }
+    this.port = {
+      'A': new Port('A'),
+      'B': new Port('B'),
+    };
 
-  portFn(name){
-    let port = {
-      I2C: function(address){
-
-      }
-    }
-
-    return port;
+    this.pwmFrequency = 0;
   }
 
 }

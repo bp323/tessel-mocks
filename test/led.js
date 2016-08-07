@@ -9,6 +9,7 @@ var led;
 describe('LED Class', function() {
   beforeEach(function () {
     led = new LED(0);
+    this.sinon.stub(console, 'info');
   });
 
   it('should have an "isOn" property', function() {
@@ -28,14 +29,14 @@ describe('LED Class', function() {
   });
 
   describe('#isOn', function () {
-      it('should default to false', function () {
-          expect(led.isOn).to.be.false;
-      });
+    it('should default to false', function () {
+      expect(led.isOn).to.be.false;
+    });
 
-      it('should change when state is altered', function () {
-          led.on();
-          expect(led.isOn).to.be.true;
-      });
+    it('should change when state is altered', function () {
+      led.on();
+      expect(led.isOn).to.be.true;
+    });
   });
 
   describe('#on', function () {
@@ -53,9 +54,8 @@ describe('LED Class', function() {
     });
 
     it('should print a log message', function () {
-      this.sinon.stub(console, 'info');
       led.on();
-      expect(console.info.called).to.be.true;
+      expect(console.info.calledOnce).to.be.true;
     });
   });
 
@@ -73,9 +73,8 @@ describe('LED Class', function() {
     });
 
     it('should print a log message', function () {
-      this.sinon.stub(console, 'info');
       led.off();
-      expect(console.info.called).to.be.true;
+      expect(console.info.calledOnce).to.be.true;
     });
   });
 
@@ -93,9 +92,8 @@ describe('LED Class', function() {
     });
 
     it('should print a log message', function () {
-      this.sinon.stub(console, 'info');
       led.toggle();
-      expect(console.info.called).to.be.true;
+      expect(console.info.calledOnce).to.be.true;
     });
   });
 });
