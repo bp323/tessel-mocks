@@ -1,6 +1,6 @@
 {
   "name": "tessel-mocks",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Mock your Tessel functionality while working locally",
   "main": "index.js",
   "scripts": {
